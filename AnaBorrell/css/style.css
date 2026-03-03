@@ -154,11 +154,17 @@ nav li {
     
 }
 
-.projects-intro img {
-    max-width: 300px;
+.launch img {
+    max-width: 150px;
     border-radius: 100%;
 }
 
+.projects-intro img {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 2px;
+
+}
 /*animation*/
 
 .fade-in{
