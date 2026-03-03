@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini e-commerce</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <h1 class="logo">Small Shop</h1>
+            
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="cart.html">Carrito
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Filtros -->
+        <section class="filtros">
+            <input type="text" id="buscar-producto" placeholder="Buscar producto...">
+            <label for="categorias">Categorías</label>
+            <select id="categorias">
+                <option value="todasLasCategorias">Todas las categorías</option>
+                <option value="equipaciones">Equipaciones</option>
+                <option value="botasFutbol">Botas futbol</option>
+                <option value="balones">Balones</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+        </section>
+        <!-- Cargador de productos -->
+        <div id="cargador-productos"class="cargador-productos">
+            Cargando productos...
+        </div>
+        <!-- Error al cargar -->
+        <div id="error-mensaje" class="error-carga">
+            Error al cargar el producto. Por favor, intentelo de nuevo más tarde.
+        </div>
+        <!-- contenedor de productos -->
+        <section id="container-productos" class="container-productos">
+            <!-- aqui es donde renderiza JS -->
+        </section>
+    </main>
+    <!-- otras notificaciones desacopladas -->
+    <div id="notificaciones" class="notificaciones"></div>
+    
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
