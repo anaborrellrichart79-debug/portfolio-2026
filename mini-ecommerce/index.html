@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini e-commerce</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div>
+        <div class="container header-content">
             <h1 class="logo">Small Shop</h1>
             
             <nav>
                 <a href="index.html">Inicio</a>
-                <a href="cart.html">Carrito
+                <a href="cart.html" class="cart-link">Carrito
                     <span id="cart-count" class="cart-count">0</span>
                 </a>
             </nav>
@@ -21,7 +22,7 @@
     </header>
 
     <!-- Main content -->
-    <main>
+    <main class="container">
         <!-- Filtros -->
         <section class="filtros">
             <input type="text" id="buscar-producto" placeholder="Buscar producto...">
@@ -35,21 +36,21 @@
             </select>
         </section>
         <!-- Cargador de productos -->
-        <div id="cargador-productos"class="cargador-productos">
+        <div id="cargador-productos"class="cargador-productos hidden">
             Cargando productos...
         </div>
         <!-- Error al cargar -->
-        <div id="error-mensaje" class="error-carga">
+        <div id="error-mensaje" class="error-carga hidden">
             Error al cargar el producto. Por favor, intentelo de nuevo más tarde.
         </div>
         <!-- contenedor de productos -->
-        <section id="container-productos" class="container-productos">
+        <div id="container-productos" class="container-productos">
             <!-- aqui es donde renderiza JS -->
-        </section>
+        </div>
     </main>
     <!-- otras notificaciones desacopladas -->
     <div id="notificaciones" class="notificaciones"></div>
-    
-    <script src="js/main.js" type="module"></script>
+
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>
