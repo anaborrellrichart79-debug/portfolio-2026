@@ -1,11 +1,11 @@
 // rutas para productos
-const express = require("express");
-const router = express.Router();
-const productsController = require("../controllers/products-controller");
+import { Router } from "express";
+const router = Router();
+import { getProductsByCategory, getProductsById, getAllProducts } from "../controllers/products-controller.js";
 
-router.get("/category/:category", productsController.getProductsByCategory);
-router.get("/id/:id", productsController.getProductsById);
-router.get("/", productsController.getAllProducts);
+router.get("/category/:category", getProductsByCategory);
+router.get("/id/:id", getProductsById);
+router.get("/", getAllProducts);
 
-module.exports = router;
+export default router;
 

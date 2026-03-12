@@ -1,18 +1,24 @@
-const express = require("express");
-const cors =require("cors");
+import express, { json } from "express";
+import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 // Llamar a rutas
-const productsRoutes = require("./routes/products-routes");
+import productsRoutes from "./routes/products-routes.js";
 
-app.use("/products", productsRoutes);
+app.use("/products.js", productsRoutes);
 
-
-app.listen(PORT, () =>{
-    console.log('servidor corriendo en el puerto' + PORT);
+app.get("/products.js", (_req, res) => {
+    res.json([
+        {id: 1, title: "balón", price: 20},
+        {id: 2, title:"Equipación", price: 35}
+    ]);
 });
+
+
+app.listen(3000, () => 
+    console.log("API corriendo en Http://localhost:3000"));
 

@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div>
+        <div class="header-content container">
             <h1 class="logo">Small Shop</h1>
             
             <nav>
                 <a href="index.html">Inicio</a>
-                <a href="cart.html">Carrito
-                    <span id="cart-count" class="cart-count">0</span>
-                </a>
             </nav>
         </div>
     </header>
@@ -24,22 +22,15 @@
     <main>
         <h2>Carrito de compra</h2>
 
-        <div id="cargador-carrito" class="cargador-carrito">
-            Cargando carrito...
-        </div>
-        
-        <div id="carrito-vacio" class="carrito-vacio">
-            El carrito está vacío.
-        </div>
-        <section id="contenedor-carrito" class="contenedor-carrito">
+        <div id="contenedor-carrito" class="contenedor-carrito">
             <!-- Aquí se renderizarán los productos del carrito -->
-        </section>
+        </div>
         <div id="resumen-carrito" class="resumen-carrito">
             <p>Total: <span id="total-carrito">0€</span></p>
             <button id="btn-caja" class="btn-finalizar">Finalizar la compra</button>
         </div>
 
     </main>
-    <script src="./js/cartMain.js"></script>
+    <script src="./js/cartMain.js" type="module"></script>
 </body>
 </html>
