@@ -10,6 +10,8 @@ export const getAllUsers = async () => {
 // CREATE USER CON ENCRIPTADO DE CONTRASEÑA
     // crear usuario (regirtrarse)
 export const createUser = async (userData) => {
+    const {name, email, password, role = "candidate"} = userData;
+
     if (!userData.name || !userData.email || !userData.password) {
         throw new Error("nombre, email y contraseña son obligatorios");
     }
@@ -21,14 +23,14 @@ export const createUser = async (userData) => {
     // guardar en DB
     const [result] = await db.execute(
     "INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?)",
-    [name, email, hashedPassword, role]
+    [name, email, passwordHash, role]
 );
 
     return {
     id: result.insertId,
-    name: userData.name,
-    email: userData.email,
-    role: userData.role || "candidate"
+    name,
+    email,
+    role
     };
 };
 

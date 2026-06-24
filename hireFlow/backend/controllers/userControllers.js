@@ -1,6 +1,6 @@
 import bcrypt  from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { findUserByEmail} from "../models/User.js";
+import { findUserByEmail, createUser, getAllUsers} from "../models/User.js";
 
 export const getUsers = async (req, res) => {
     try {
